@@ -14,7 +14,7 @@ let linhasPH = {};
 
 // Carregar CSVs
 function carregarCSV() {
-    Papa.parse('/data/LinhasJO.csv', {
+    Papa.parse('data/LinhasJO.csv', {
         download: true,
         header: true,
         complete: function(results) {
@@ -22,7 +22,7 @@ function carregarCSV() {
         }
       });
       
-      Papa.parse('/data/LinhasPH.csv', {
+      Papa.parse('data/LinhasPH.csv', {
         download: true,
         header: true,
         complete: function(results) {
@@ -110,5 +110,5 @@ function carregarJSON() {
   
   // Carregar CSVs e começar o loop de atualização
   carregarCSV();
-  setInterval(carregarJSON, 35000); // Atualiza a cada 35 segundos
+  setInterval(carregarJSON, 5000); // Atualiza a cada 35 segundos
   
