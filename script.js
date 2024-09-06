@@ -95,7 +95,9 @@ function filtrarOnibus() {
 
 // Simulação do carregamento do JSON e atualização do mapa a cada 30 segundos
 function carregarJSON() {
-    fetch('http://citgis.metropolisc.com.br:9977/gtfs-realtime-exporter/findAll/json')
+    fetch('https://cors-anywhere.herokuapp.com/http://citgis.metropolisc.com.br:9977/gtfs-realtime-exporter/findAll/json')
+
+
       .then(response => response.json())
       .then(data => {
         data.forEach(veiculo => {
